@@ -6,6 +6,12 @@ class RecipientController {
 
     res.json(recipient);
   }
+
+  async index(req, res) {
+    const recipient = await Recipient.findAll();
+
+    res.json(recipient);
+  }
 }
 
 export default new RecipientController();
